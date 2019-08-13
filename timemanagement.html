@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My Slide</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<script src="jquery.coverflow.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<div class="topnav">
+
+  <a href="index.html">Home</a>
+  <a href="timemanagement.html">Okay</a>
+  <a href="poortm.html">Poor</a>
+</div>
+
+    <!-- jQuery/jQueryUI (hosted) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.js"></script>
+
+        <!-- interpolate, depends on jQ 1.8.0+ -->
+        <script src="jquery.interpolate.min.js"></script>
+
+        <!-- Coverflow -->
+        <script src="jquery.coverflow.js"></script>
+
+        <style>
+
+
+            /* CD covers */
+            .photos .cover {
+                cursor: pointer;
+                /*-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255, 255, 255, .5)));*/
+            }
+
+            #photos-info {
+                position:       relative;
+                text-align:     center;
+                z-index:        1000;
+                text-shadow:    0 0 8px white;
+            }
+
+            #photos-name {
+                font-size: 200%;
+                font-weight: bold;
+            }
+
+            .clearfix {
+                clear: both;
+            }
+        </style>
+
+        <script>
+            $(function() {
+
+                /* CD covers */
+
+                if ($.fn.reflect) {
+                    $('.photos .cover').reflect();
+                }
+
+                $('.photos').coverflow({
+                    easing:         'easeOutElastic',
+                    duration:       1000,
+                    index:          3,
+                    width:          320,
+                    height:         240,
+                    visible:        'density',
+                    selectedCss:    {   opacity: 1  },
+                    outerCss:       {   opacity: .1 },
+
+                    confirm:        function() {
+                        console.log('Confirm');
+                    },
+
+                    before:         function() {
+                        $('#photos-name').stop(true).fadeOut('fast');
+                    },
+
+                    select:         function(event, cover) {
+                        var img = $(cover).children().andSelf().filter('img').last();
+                        $('#photos-name').text(img.data('name') || 'unknown').stop(true).fadeIn('fast');
+                    },
+                });
+
+                $('#leakdetect').click(function() {
+                    $('#leakbucket').empty();
+                    for (var i = 0; i < 100; ++i) {
+                        $('<div><div>test</div></div>').appendTo('#leakbucket').coverflow();
+                    }
+                });
+            });
+        </script>
+    </head>
+
+
+    <body>
+<br>
+<br>
+
+<h1> Moderate Time Management </h1>
+<br>
+<br>
+<br>
+<br>
+<div class="photos" autofocus>
+
+            <img class="cover" data-name="Tip One" src="pics/tip.png"/>
+            <img class="cover" data-name="Tip Two" src="pics/tip6.png"/>
+            <img class="cover" data-name="Tip Three" src="pics/tip2.jpg"/>
+            <img class="cover" data-name="Tip Four" src="pics/tip3.jpg"/>
+            <img class="cover" data-name="Tip Five" src="pics/tip5.png"/>
+
+        </div>
+        <div id="photos-info">
+            <div id="photos-name"></div>
+        </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+
+<div id="mtm">
+<h3>Why to improve your time management</h3>
+<p>When you learn and maintain good time management skills, you’ll find freedom from deadline pressure and from stress in general. You’ll be more productive, procrastinate less, and have more time to relax, which helps further decrease stress and anxiety.
+</p>
+</div>
+
+
+
+
+
+
+<div id="em">
+<h3>Eisenhower Matrix</h3>
+
+<ol>
+<li>
+Do, consists of your most important tasks. The activities which need to be done urgently. The tasks with a deadline approaching or the ones that cannot be delayed generally fall in this category.For putting tasks in this category, you need to thoroughly analyze your priorities first and then decide if it fits with the do it now criteria. If the task needs to be done within a day, or no longer than next day, it is an urgent task. Do.it.now!
+</li>
+<br>
+<li>Decide,
+It constitutes of the tasks which are important, but not necessarily urgent. This could include an array of responsibilities ranging from professional emails, follow-ups, to more personal appointments and commitments.Tasks in this quadrant need to be scheduled for some other time.
+</li>
+<br>
+<li>Delegate,
+refers to the tasks which are not important, but urgent. Although it sounds counter-intuitive, because naturally your first instinct would be that aren’t tasks which are urgent, important too? Not necessarily!These activities generally give you the deception of being important, while in reality they don’t really contribute much towards your productivity.
+</li>
+<br>
+<li>Eliminate,
+These consists of tasks that are essentially your productivity killers. They do not contribute at all towards your goals. Identify these activities and eliminate them to give your productivity a boost.
+Common examples of these activities include mindless surfing on social media,
+</li>
+    </ol>
+</div>
+
+
+<div id="wbs">
+<h3>Warren Buffet Strategy</h3>
+
+<ol>
+<li>Write a list of 10-25 of your goals both professional and personal</li>
+<li>Circle your top five goals</li>
+<li>Focus on your top five goals and eliminate the others</li>
+
+
+    </ol>
+</div>
+
+<img src="pics/clock1.jpg" alt="..." class="rounded">
+
+<div class="tips">
+<h3>Time management tips for people with moderate time management</h3>
+
+<ul>
+<li> Put a time limit on tasks.</li>
+<li>Plan your week on Sunday</li>
+<li>Create a daily plan</li>
+<li>Add a “done list” to your to-do list</li>
+<li>Complete your most important and demanding tasks first thing in the morning</li>
+<li>Block out distractions</li>
+<li>Don’t wait for inspiration - do it now</li>
+<li>Schedule breaks between tasks</li>
+<li>Make the most of waiting times</li>
+<li>Use your calendar</li>
+    </ul>
+</div>
+
+
+
+FirstName:<br>
+<input type="text" name="Firstname"> <br>
+
+LastName:<br>
+<input type="text" name="Lastname"> <br>
+<br>
+ <input type="radio" name="gender" value="male" checked>Male<br>
+
+    <input type="radio" name="gender" value="female" checked>Female<br>
+<br>
+    Was this informative?:<br>
+     <input type="radio" name="answer" value="Yes" checked>Yes<br>
+<input type="radio" name="answer" value="No" checked>No<br>
+<br>
+Do you believe that you have moderate time management skills?:<br>
+ <input type="radio" name="answer1" value="Yes" checked>Yes<br>
+<input type="radio" name="answer1" value="No" checked>No<br>
+<br>
+Did this information help you?:<br>
+ <input type="radio" name="answer2" value="Yes" checked>Yes<br>
+<input type="radio" name="answer2" value="No" checked>No<br>
+
+
+
+
+    </body>
+</html>

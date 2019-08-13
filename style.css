@@ -1,22 +1,50 @@
 body{
     font-family: 'Libre Caslon Text', serif;
-    margin: 0;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding-bottom: 25px;
+    padding-right: 25px;
+    padding-left: 25px;
+    border-left: 25px;
+    border-right: 25px;
+    border-bottom: 25px;
+    background-color:white;
+
+}
+
+
+.About{
+    background-color: aqua;
+}
+
+.WhyChange{
+    background-color: yellow;
+}
+
+.ToDo{
+    background-color: greenyellow;
+}
+
+h1{
+    color: purple;
+}
+
+h2{
+    color: red;
+    text-decoration: underline;
+    text-align: center;
 }
 
 .topnav {
   overflow: hidden;
   background-color: red;
-  color:black;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #333;
 }
 
 .topnav a {
   float: left;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -24,10 +52,11 @@ body{
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color:grey;
+  color: red;
 }
 
 .topnav a.active {
-  background-color: #4CAF50;
-  color: white;
+  background-color: grey;
+  color: black;
+}
