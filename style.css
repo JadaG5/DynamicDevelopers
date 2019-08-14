@@ -15,24 +15,12 @@ body{
 }
 
 
-.About{
-    background-color: aqua;
-}
-
-.WhyChange{
-    background-color: yellow;
-}
-
-.ToDo{
-    background-color: greenyellow;
-}
-
 h1{
     color: purple;
 }
 
 h2{
-    color: red;
+    color: purple;
     text-decoration: underline;
     text-align: center;
 }
@@ -59,4 +47,38 @@ h2{
 .topnav a.active {
   background-color: grey;
   color: black;
+}
+
+
+#id{
+    background-image: url("https://i.imgur.com/iY6kWxX.gif");
+}
+
+
+#mtm{
+    text-align: center;
+    color:black;
+    padding:50px;
+}
+#em{
+    text-align: center;
+    color:black;
+    padding:50px;
+}
+#wbs{
+    text-align: center;
+    color:black;
+    padding:50px;
+}
+#title{
+    color:black;
+    text-align:center;
+}
+.tips{
+    color:black;
+    text-align: center;
+}
+#idk{
+    color:black;
+    text-align: center;
 }
