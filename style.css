@@ -21,12 +21,15 @@ marquee{
 
 h1{
     color: purple;
+      font-size: 40px;
+
 }
 
 h2{
     color: purple;
     text-decoration: underline;
     text-align: center;
+
 }
 
 .topnav {
@@ -103,6 +106,7 @@ background-image: url("https://thumbs.gfycat.com/ScentedPastelAlligatorsnappingt
 }
 #title{
     color:red;
+
 }
 h3{
     color:red;
